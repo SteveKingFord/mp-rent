@@ -8,8 +8,9 @@
 </template>
 <style lang="less">
 .app-container {
+  color: #333;
   min-height: calc(100vh - 55px);
-  background-color: #eff1f8;
+  background-color: #F5F5F5;
 }
 </style>
 

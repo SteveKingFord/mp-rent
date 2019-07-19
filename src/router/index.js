@@ -8,83 +8,36 @@ Vue.use(Router)
 const router =new Router({
   routes: [
     {
-      path: '/login',
-      name: 'Login',
-      component: () => import('@/views/login')
+      path: '/bill',
+      name: 'Bill',
+      component: () => import('@/views/me/bill'),
     },
     {
-      path: '/buy',
-      name: 'Buy',
-      component: () => import('@/views/home/buy'),
+      path: '/lease',
+      name: 'Lease',
+      component: () => import('@/views/me/lease'),
     },
     {
-      path: '/product_detail',
-      name: 'ProductDetail',
-      component: () => import('@/views/home/detail'),
-    },
-    {
-      path: '/order',
-      name: 'Order',
-      component: () => import('@/views/me/order'),
-    },
-    {
-      path: '/order_detail',
-      name: 'OrderDetail',
-      component: () => import('@/views/me/orderDetail'),
-    },
-    {
-      path: '/record',
-      name: 'Record',
-      component: () => import('@/views/me/record'),
-    },
-    {
-      path: '/team',
-      name: 'Team',
-      component: () => import('@/views/me/team'),
-    },
-    {
-      path: '/member',
-      name: 'Member',
-      component: () => import('@/views/me/member'),
-    },
-    {
-      path: '/setting',
-      name: 'Setting',
-      component: () => import('@/views/me/setting'),
+      path: '/detail',
+      name: '/RentDetail',
+      component: () => import('@/views/rent/detail'),
     },
     {
       path: '/',
       component: Layout,
-      redirect: '/home',
+      redirect: '/rent',
       children: [{
-        path: 'home',
-        name: 'Home',
-        component: () => import('@/views/home'),
-      },
-      {
-        path: 'category',
-        name: 'Category',
-        component: () => import('@/views/category'),
-      },
-      {
-        path: 'collect',
-        name: 'Collect',
-        component: () => import('@/views/collect'),
-      },
-      {
-        path: 'collect2',
-        name: 'Collect2',
-        component: () => import('@/views/collect/collect'),
+        path: 'rent',
+        name: 'Rent',
+        component: () => import('@/views/rent'),
       },
       {
         path: 'me',
         name: 'Me',
         component: () => import('@/views/me'),
       },
-     
-      
     ]
-    }
+  }
 
   ]
 })

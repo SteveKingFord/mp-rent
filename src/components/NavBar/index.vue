@@ -6,10 +6,13 @@
 			:right-text="rightText"
 			:left-arrow="leftArrow"
 			@click-left="onClickLeft"
-			@click-right="onClickRight"
 			:fixed="fixed"
 			:border="border"
-		/>
+		>
+		 <div slot="right" v-if="share" 	@click="onClickRight" class="share">
+			 	<van-icon name="ellipsis" />
+		 </div>
+		</van-nav-bar>
 	</div>
 </template>
 
@@ -44,7 +47,11 @@ export default {
 		border: {
 			type: Boolean,
 			default: false
-		}
+		},
+		share : {
+			type: Boolean,
+			default: false
+		},
 	},
 	methods: {
 		onClickLeft() {
