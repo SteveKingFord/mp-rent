@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <nav-bar :leftArrow='false' title="我的租约" />
+    <nav-bar  title="我的租约" />
     <!-- 房东信息 -->
     <div class="lease-card margin-top-sm">
       <div class="title">房东信息</div>

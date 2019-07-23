@@ -8,6 +8,11 @@ Vue.use(Router)
 const router =new Router({
   routes: [
     {
+      path: '/pay',
+      name: 'Pay',
+      component: () => import('@/views/rent/pay'),
+    },
+    {
       path: '/bill',
       name: 'Bill',
       component: () => import('@/views/me/bill'),
