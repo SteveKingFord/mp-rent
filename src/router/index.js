@@ -23,6 +23,11 @@ const router =new Router({
       component: () => import('@/views/me/lease'),
     },
     {
+      path: '/merchantCA',
+      name: 'MerchantCA',
+      component: () => import('@/views/me/merchantCA'),
+    },
+    {
       path: '/detail',
       name: '/RentDetail',
       component: () => import('@/views/rent/detail'),
